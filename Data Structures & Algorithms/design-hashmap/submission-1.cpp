@@ -1,0 +1,27 @@
+class MyHashMap {
+public:
+    vector<int> my_hash_map;
+
+    MyHashMap() : my_hash_map(1000001,-1) { 
+    }
+
+    void put(int key, int value) {
+        my_hash_map[key] = value;
+    }
+    
+    int get(int key) {
+       return my_hash_map[key] != -1 ? my_hash_map[key] : -1; 
+    }
+    
+    void remove(int key) { 
+        my_hash_map[key] = -1;
+    }
+};
+
+/**
+ * Your MyHashMap object will be instantiated and called as such:
+ * MyHashMap* obj = new MyHashMap();
+ * obj->put(key,value);
+ * int param_2 = obj->get(key);
+ * obj->remove(key);
+ */
